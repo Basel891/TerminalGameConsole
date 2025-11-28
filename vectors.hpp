@@ -46,5 +46,7 @@ float magnitude(vec2);
 float magnitude(vec3);
 vec2 normalize(vec2);
 vec3 normalize(vec3);
+vec2 scalar_multiply(vec2,float);
+vec3 scalar_multiply(vec3,float);
 } // namespace SH
 #endif

@@ -81,4 +81,6 @@ vec3 normalize(vec3 a) {
   c.z = a.z / mag;
   return c;
 }
+vec2 scalar_multiply(vec2 a,float s){vec2 c(a.x*s,a.y*s);return c;}
+vec3 scalar_multiply(vec3 a,float s){vec3 c(a.x*s,a.y*s,a.z*s);return c;}
 } // namespace SH
