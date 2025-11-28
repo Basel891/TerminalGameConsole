@@ -1,5 +1,6 @@
 #include "mazerunner.hpp"
 #include "generalutils.hpp"
+#include "shapes.hpp"
 #include "vectors.hpp"
 #include <chrono>
 #include <iostream>
@@ -7,8 +8,10 @@
 void render_pixel(int x, int y, int width, int height,
                   std::string &screen_buffer, SH::vec2 &CENTER_PIXEL) {
   SH::vec2 CURRENT_PIXEL((float)x, (float)y);
+  SH::vec2 offset(width / 10, height / 10);
+  SH::square testsq(SH::add(CENTER_PIXEL,offset), 20.0);
   int r, g, b;
-  r = SH::distance(CENTER_PIXEL, CURRENT_PIXEL);
+  r = testsq.get_signed_distance(CURRENT_PIXEL) == 0 ? r = 0 : r = 255;
   g = r;
   b = r;
   if (x == CENTER_PIXEL.x && y == CENTER_PIXEL.y) {

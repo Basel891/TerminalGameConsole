@@ -40,6 +40,11 @@ vec2 subtract(vec2, vec2);
 vec3 subtract(vec3, vec3);
 float distance(vec2, vec2);
 float distance(vec3, vec3);
-
+vec2 abs(vec2);
+vec3 abs(vec3);
+float magnitude(vec2);
+float magnitude(vec3);
+vec2 normalize(vec2);
+vec3 normalize(vec3);
 } // namespace SH
 #endif
